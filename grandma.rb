@@ -1,15 +1,17 @@
 require 'pry'
 # Write a speak_to_grandma method.
 def speak_to_grandma(speak)
-  speak.upcase
-  binding.pry
+  #we first check if its upcase
   if speak == speak.upcase
-    return "NO, NOT SINCE 1938!"
-  elsif speak == "I LOVE YOU GRANDMA!"
-    return "I LOVE YOU TOO PUMPKIN!"
-  else
+    if speak == "I LOVE YOU GRANDMA!"
+      return "I LOVE YOU TOO PUMPKIN!"
+    else
+      return "NO, NOT SINCE 1938!"
+    end
+  else 
     return "HUH?! SPEAK UP, SONNY!"
   end
+   
 # Whatever you say to grandma, she should respond with
 # HUH?! SPEAK UP, SONNY!
 # unless you shout it (type in all capitals).
