@@ -1,0 +1,41 @@
+Run options: include {:focus=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+#speak_to_grandma
+  responds with I LOVE YOU TOO PUMPKIN! if you say I LOVE YOU GRANDMA! (FAILED - 1)
+  responds with HUH?! SPEAK UP, SONNY! unless you are shouting
+  responds with HUH?! SPEAK UP, SONNY! for a second time
+  responds with NO, NOT SINCE 1938! when she can hear you
+  responds with NO, NOT SINCE 1938! for a second time
+  responds with I LOVE YOU TOO PUMPKIN! if you say I LOVE YOU GRANDMA! (FAILED - 2)
+  responds with HUH?! SPEAK UP, SONNY! unless you are shouting
+
+Failures:
+
+  1) #speak_to_grandma responds with I LOVE YOU TOO PUMPKIN! if you say I LOVE YOU GRANDMA!
+     Failure/Error: expect(speak_to_grandma('I LOVE YOU GRANDMA!')).to eq 'I LOVE YOU TOO PUMPKIN!'
+
+       expected: "I LOVE YOU TOO PUMPKIN!"
+            got: "NO, NOT SINCE 1938!"
+
+       (compared using ==)
+     # ./spec/grandma_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+  2) #speak_to_grandma responds with I LOVE YOU TOO PUMPKIN! if you say I LOVE YOU GRANDMA!
+     Failure/Error: expect(speak_to_grandma('I LOVE YOU GRANDMA!')).to eq 'I LOVE YOU TOO PUMPKIN!'
+
+       expected: "I LOVE YOU TOO PUMPKIN!"
+            got: "NO, NOT SINCE 1938!"
+
+       (compared using ==)
+     # ./spec/grandma_spec.rb:23:in `block (2 levels) in <top (required)>'
+
+Finished in 0.02163 seconds (files took 0.16687 seconds to load)
+7 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/grandma_spec.rb:2 # #speak_to_grandma responds with I LOVE YOU TOO PUMPKIN! if you say I LOVE YOU GRANDMA!
+rspec ./spec/grandma_spec.rb:22 # #speak_to_grandma responds with I LOVE YOU TOO PUMPKIN! if you say I LOVE YOU GRANDMA!
+
